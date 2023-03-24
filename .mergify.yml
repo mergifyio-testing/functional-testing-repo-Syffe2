@@ -1,10 +1,12 @@
 pull_request_rules:
-  - name: dismiss reviews
-      conditions: []
+   - name: label toto
+      conditions:
+        - label=tata
       actions:
-        dismiss_reviews: {}
-  
-  - name: label on queued
+        label:
+          toggle:
+            - 'toto'
+    - name: label on queued
       conditions:
         - queue-position>=0
       actions:
